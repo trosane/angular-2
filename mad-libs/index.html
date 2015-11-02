@@ -16,7 +16,7 @@
 		<script type="text/javascript" src="js/main.js"></script>
 
 	</head>
-	<body>
+	<body ng-app="myApp" ng-controller="myCtrl">
 		<header><img src="http://1.bp.blogspot.com/-1X-kgAXK_bs/USOWWN-xu1I/AAAAAAAAAXM/4c9kLfJSrV4/s1600/madlibslogo.png"</img></header>
 		
 		<!-- Instructions -->
@@ -26,33 +26,33 @@
 
 
 		<!-- Initiate you application.  -->
-		<div>
+		<div ng-init="myApp">
 
 			<!-- Story: bind your variables where appropriate -->
 			<p id="story">
-				This is a story about <text></text>. 
-				<text></text> is <text></text>
-				years old.  One day, <text></text> went to 
-				<text></text> and ate <text></text>. 
+				This is a story about <text>{{name}}</text>. 
+				<text>{{name}}</text> is <text>{{age}}</text>
+				years old.  One day, <text>{{name}}</text> went to 
+				<text>{{place}}</text> and ate <text>{{food}}</text>. 
 			</p>
 
 			<!-- Form: associate the appropriate model with each input element -->
 			<form>
 				<!-- Name -->
 				<label for="name">Name:</label>
-				<input class="form-control" id="name"></input><br/>
+				<input class="form-control" id="name" ng-model="name"></input><br/>
 
 				<!-- Age -->
 				<label for="age">Age:</label>
-				<input class="form-control" id="age"></input><br/>
+				<input class="form-control" id="age" ng-model="age"></input><br/>
 
 				<!-- Location -->
 				<label for="location">Location:</label>
-				<input class="form-control" id="location"></input><br/>
+				<input class="form-control" id="location" ng-model="place"></input><br/>
 
 				<!-- Food -->
 				<label for="food">Food:</label>
-				<input class="form-control" id="food"></input><br/>
+				<input class="form-control" id="food" ng-model="food"></input><br/>
 			</form>			
 		</div>
 	</body>
